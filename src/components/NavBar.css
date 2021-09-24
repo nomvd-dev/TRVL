@@ -1,0 +1,119 @@
+nav {
+  background-color: #1c1a1a;
+  color: #fff;
+  position: sticky;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  font-weight: bold;
+  top: 0;
+  z-index: 999;
+}
+
+nav a {
+  color: #fff;
+  font-size: 20px !important;
+  text-decoration: none;
+}
+
+nav .navbar-home-icon {
+  color: #fff;
+  font-size: 24px !important;
+}
+nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav button {
+  color: #fff;
+  display: none;
+  border-color: transparent;
+  background: transparent;
+  font-size: 24px;
+}
+
+nav button:focus {
+  outline: none;
+}
+
+nav .navbar-menu {
+  display: flex;
+  list-style-type: none;
+  text-decoration: none;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+nav .navbar-menu li {
+  position: relative;
+  display: block;
+  float: left;
+  border-bottom: 2px solid transparent;
+  /* padding-bottom: 5px; */
+  transition: all 0.2s ease-out;
+}
+
+.navbar .navbar-menu .nav-link {
+  margin-left: 0;
+}
+
+nav .navbar-menu .nav-item:hover {
+  border-bottom: 4px solid #fff;
+}
+
+nav .navbar-menu .nav-item {
+  height: 80px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 960px) {
+  nav {
+    display: block;
+  }
+  nav .navbar-menu {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 80px;
+    padding: 0;
+    background: #242222;
+    width: 100%;
+    left: -100%;
+    transition: all 0.5s ease;
+  }
+  nav .navbar-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+  }
+  nav .navbar-menu li {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+  }
+  nav .navbar-menu li .nav-link {
+    padding: 25px;
+  }
+  nav .navbar-icon {
+    display: block;
+  }
+  nav .navbar-menu li:hover {
+    border-bottom: 2px solid #fff;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  nav .navbar-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+}
